@@ -24,6 +24,7 @@ public:
 
   // return the pad number. counts from 1.
   int pad() const { return pad_; }
+  int strip() const { return pad_; }
   int bx() const { return bx_; }
 
 private:
