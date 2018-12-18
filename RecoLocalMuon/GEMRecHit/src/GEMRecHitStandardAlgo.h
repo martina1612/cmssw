@@ -10,7 +10,6 @@
 #include "RecoLocalMuon/GEMRecHit/interface/GEMRecHitBaseAlgo.h"
 
 
-
 class GEMRecHitStandardAlgo : public GEMRecHitBaseAlgo {
  public:
   /// Constructor
@@ -26,13 +25,13 @@ class GEMRecHitStandardAlgo : public GEMRecHitBaseAlgo {
 
 
   virtual bool compute(const GEMEtaPartition& roll,
-                       const GEMCluster& cluster,
+                       const RecHitCluster& cluster,
                        LocalPoint& point,
                        LocalError& error) const;
 
 
   virtual bool compute(const GEMEtaPartition& roll,
-                       const GEMCluster& cluster,
+                       const RecHitCluster& cluster,
                        const float& angle,
                        const GlobalPoint& globPos, 
                        LocalPoint& point,

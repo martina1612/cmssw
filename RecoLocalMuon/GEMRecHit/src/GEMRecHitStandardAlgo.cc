@@ -11,6 +11,7 @@
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 #include "FWCore/Framework/interface/EventSetup.h"
 #include "FWCore/Utilities/interface/Exception.h"
+#include "RecoLocalMuon/GEMRecHit/interface/RecHitCluster.h"
 
 
 GEMRecHitStandardAlgo::GEMRecHitStandardAlgo(const edm::ParameterSet& config) :
@@ -33,7 +34,7 @@ void GEMRecHitStandardAlgo::setES(const edm::EventSetup& setup) {
 
 // First Step
 bool GEMRecHitStandardAlgo::compute(const GEMEtaPartition& roll,
-				    const GEMCluster& cluster,
+				    const RecHitCluster& cluster,
 				    LocalPoint& Point,
 				    LocalError& error)  const
 {
@@ -51,7 +52,7 @@ bool GEMRecHitStandardAlgo::compute(const GEMEtaPartition& roll,
 
 
 bool GEMRecHitStandardAlgo::compute(const GEMEtaPartition& roll,
-				    const GEMCluster& cl,
+				    const RecHitCluster& cl,
 				    const float& angle,
 				    const GlobalPoint& globPos, 
 				    LocalPoint& Point,

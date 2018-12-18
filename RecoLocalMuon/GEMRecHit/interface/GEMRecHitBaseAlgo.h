@@ -19,7 +19,7 @@
 #include "RecoLocalMuon/GEMRecHit/src/GEMEtaPartitionMask.h"
 #include "RecoLocalMuon/GEMRecHit/src/GEMMaskReClusterizer.h"
 
-class GEMCluster;
+class RecHitCluster;
 class GEMEtaPartition;
 class GEMDetId;
 
@@ -50,7 +50,7 @@ class GEMRecHitBaseAlgo {
 
   /// standard local recHit computation
   virtual bool compute(const GEMEtaPartition& roll,
-                       const GEMCluster& cl,
+                       const RecHitCluster& cl,
                        LocalPoint& Point,
                        LocalError& error) const = 0;
 
@@ -58,7 +58,7 @@ class GEMRecHitBaseAlgo {
   /// local recHit computation accounting for track direction and 
   /// absolute position
   virtual bool compute(const GEMEtaPartition& roll,
-		       const GEMCluster& cl,
+		       const RecHitCluster& cl,
                        const float& angle,
                        const GlobalPoint& globPos, 
                        LocalPoint& Point,

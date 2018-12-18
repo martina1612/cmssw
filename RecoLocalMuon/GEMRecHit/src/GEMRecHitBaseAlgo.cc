@@ -5,7 +5,6 @@
  */
 
 
-
 #include "RecoLocalMuon/GEMRecHit/interface/GEMRecHitBaseAlgo.h"
 #include "RecoLocalMuon/GEMRecHit/src/GEMClusterContainer.h"
 #include "RecoLocalMuon/GEMRecHit/src/GEMCluster.h"
@@ -15,6 +14,7 @@
 #include "Geometry/GEMGeometry/interface/GEMEtaPartition.h"
 #include "DataFormats/GEMDigi/interface/GEMDigiCollection.h"
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
+#include "RecoLocalMuon/GEMRecHit/src/Clusterizer.h"
 
 
 GEMRecHitBaseAlgo::GEMRecHitBaseAlgo(const edm::ParameterSet& config) {
@@ -32,14 +32,16 @@ edm::OwnVector<GEMRecHit> GEMRecHitBaseAlgo::reconstruct(const GEMEtaPartition& 
                                                          const EtaPartitionMask& mask) {
   edm::OwnVector<GEMRecHit> result; 
 
+  Clusterizer<GEMDigiCollection::Range> Gclizer;
+  RecHitClusterContainer cls;
+  Gclizer.clusterize(digiRange, cls);
+//  GEMClusterizer clizer;
+//  GEMClusterContainer tcls = clizer.doAction(digiRange);
+//  GEMMaskReClusterizer mrclizer;
+//  GEMClusterContainer cls = mrclizer.doAction(gemId,tcls,mask);
 
-  GEMClusterizer clizer;
-  GEMClusterContainer tcls = clizer.doAction(digiRange);
-  GEMMaskReClusterizer mrclizer;
-  GEMClusterContainer cls = mrclizer.doAction(gemId,tcls,mask);
 
-
-  for (GEMClusterContainer::const_iterator cl = cls.begin();
+  for (RecHitClusterContainer::const_iterator cl = cls.begin();
        cl != cls.end(); cl++){
     
     LocalError tmpErr;
