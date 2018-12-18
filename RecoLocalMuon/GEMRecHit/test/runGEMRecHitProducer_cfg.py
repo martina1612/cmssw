@@ -29,7 +29,7 @@ process.load('Configuration.EventContent.EventContent_cff')
 process.load('SimGeneral.MixingModule.mixNoPU_cfi')
 process.load('Configuration.Geometry.GeometryExtended2015MuonGEMDevReco_cff')
 process.load('Configuration.Geometry.GeometryExtended2015MuonGEMDev_cff')
-process.load('Configuration.StandardSequences.MagneticField_38T_PostLS1_cff')
+#process.load('Configuration.StandardSequences.MagneticField_38T_PostLS1_cff')   # COMMENTATO MARTINA
 process.load('Configuration.StandardSequences.Generator_cff')
 process.load('IOMC.EventVertexGenerators.VtxSmearedRealistic8TeVCollision_cfi')
 process.load('GeneratorInterface.Core.genFilterSummary_cff')
@@ -66,11 +66,11 @@ from Configuration.AlCa.GlobalTag import GlobalTag
 process.GlobalTag = GlobalTag(process.GlobalTag, 'auto:run2_mc', '')
 
 # Fix DT and CSC Alignment #
-############################
-from SLHCUpgradeSimulations.Configuration.fixMissingUpgradeGTPayloads import fixDTAlignmentConditions
-process = fixDTAlignmentConditions(process)
-from SLHCUpgradeSimulations.Configuration.fixMissingUpgradeGTPayloads import fixCSCAlignmentConditions
-process = fixCSCAlignmentConditions(process)
+############################        # COMMENTATI DA MARTINA
+#from SLHCUpgradeSimulations.Configuration.fixMissingUpgradeGTPayloads import fixDTAlignmentConditions
+#process = fixDTAlignmentConditions(process)
+#from SLHCUpgradeSimulations.Configuration.fixMissingUpgradeGTPayloads import fixCSCAlignmentConditions
+#process = fixCSCAlignmentConditions(process)
 
 # Skip Digi2Raw and Raw2Digi steps for Al Muon detectors #
 ##########################################################
@@ -107,7 +107,7 @@ process.gemRecHits = cms.EDProducer("GEMRecHitProducer",
 ##########################
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-        'file:out_digi.root'
+        'file:step2.root'
         # 'file:out_digi_100GeV_1000evts.root'
         # 'file:out_digi_1To100GeV_1000evts.root'
     )
@@ -129,7 +129,7 @@ process.output = cms.OutputModule("PoolOutputModule",
 
 ### Paths and Schedules
 #######################
-process.rechit_step  = cms.Path(process.localreco+process.gemRecHits+process.me0LocalReco)
+process.rechit_step  = cms.Path(process.gemRecHits)   # (process.localreco+process.gemRecHits+process.me0LocalReco)
 #process.rechit_step  = cms.Path(process.localreco+process.gemRecHits+process.me0RecHits)
 process.endjob_step  = cms.Path(process.endOfProcess)
 process.out_step     = cms.EndPath(process.output)

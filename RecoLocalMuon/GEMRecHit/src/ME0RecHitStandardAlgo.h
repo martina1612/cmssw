@@ -4,11 +4,11 @@
 /** \class ME0RecHitStandardAlgo
  *  Concrete implementation of ME0RecHitBaseAlgo.
  *
- *  $Date: 2014/02/04 10:16:36 $
- *  $Revision: 1.1 $
  *  \author M. Maggi -- INFN Bari
  */
+
 #include "RecoLocalMuon/GEMRecHit/interface/ME0RecHitBaseAlgo.h"
+
 
 class ME0RecHitStandardAlgo : public ME0RecHitBaseAlgo {
  public:
@@ -24,11 +24,18 @@ class ME0RecHitStandardAlgo : public ME0RecHitBaseAlgo {
   virtual void setES(const edm::EventSetup& setup);
 
 
-  virtual bool compute(const ME0DigiPreReco& digi,
+  virtual bool compute(const ME0EtaPartition& roll,
+                       const RecHitCluster& cluster,
                        LocalPoint& point,
                        LocalError& error) const;
 
 
+  virtual bool compute(const ME0EtaPartition& roll,
+                       const RecHitCluster& cluster,
+                       const float& angle,
+                       const GlobalPoint& globPos, 
+                       LocalPoint& point,
+                       LocalError& error) const;
 };
 #endif
 

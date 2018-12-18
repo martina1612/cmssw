@@ -1,0 +1,168 @@
+<FrameworkJobReport>
+<FrameworkError ExitStatus="8001" Type="Fatal Exception" >
+<![CDATA[
+An exception of category 'PluginLibraryLoadError' occurred while
+   [0] Constructing the EventProcessor
+Exception Message:
+unable to load /afs/cern.ch/work/m/mressego/test/CMSSW_9_3_3/lib/slc6_amd64_gcc630/poisoned/plugin-poisoned-RecoLocalMuonGEMRecHit.so because /afs/cern.ch/work/m/mressego/test/CMSSW_9_3_3/lib/slc6_amd64_gcc630/poisoned/plugin-poisoned-RecoLocalMuonGEMRecHit.so: cannot open shared object file: No such file or directory
+
+]]>
+</FrameworkError>
+
+<InputFile>
+<State  Value="open"/>
+<LFN></LFN>
+<PFN>file:/afs/cern.ch/work/m/mressego/private/ME0trigger/CMSSW_9_3_3/src/RecoLocalMuon/GEMRecHit/test/step2.root</PFN>
+<Catalog></Catalog>
+<ModuleLabel>source</ModuleLabel>
+<GUID>D837EF83-460B-E811-9F4C-FA163E6848A7</GUID>
+<Branches>
+  <Branch>CSCDetIdCSCComparatorDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCComparatorDigi_DIGI.</Branch>
+  <Branch>CSCDetIdCSCStripDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCStripDigi_DIGI.</Branch>
+  <Branch>CSCDetIdCSCWireDigiMuonDigiCollection_simMuonCSCDigis_MuonCSCWireDigi_DIGI.</Branch>
+  <Branch>CrossingFramePlaybackInfoNew_mix__DIGI.</Branch>
+  <Branch>DTLayerIdDTDigiMuonDigiCollection_simMuonDTDigis__DIGI.</Branch>
+  <Branch>DTLayerIdDTDigiSimLinkMuonDigiCollection_simMuonDTDigis__DIGI.</Branch>
+  <Branch>EBDigiCollection_simEcalDigis_ebDigis_DIGI.</Branch>
+  <Branch>EBDigiCollection_simEcalUnsuppressedDigis__DIGI.</Branch>
+  <Branch>EBDigiCollection_simEcalUnsuppressedDigis_APD_DIGI.</Branch>
+  <Branch>EBSrFlagsSorted_simEcalDigis_ebSrFlags_DIGI.</Branch>
+  <Branch>EEDigiCollection_simEcalDigis_eeDigis_DIGI.</Branch>
+  <Branch>EEDigiCollection_simEcalUnsuppressedDigis__DIGI.</Branch>
+  <Branch>EESrFlagsSorted_simEcalDigis_eeSrFlags_DIGI.</Branch>
+  <Branch>ESDigiCollection_simEcalPreshowerDigis__DIGI.</Branch>
+  <Branch>ESDigiCollection_simEcalUnsuppressedDigis__DIGI.</Branch>
+  <Branch>EcalEBTriggerPrimitiveDigisSorted_simEcalEBTriggerPrimitiveDigis__DIGI.</Branch>
+  <Branch>EcalTriggerPrimitiveDigisSorted_simEcalTriggerPrimitiveDigis__DIGI.</Branch>
+  <Branch>GEMDetIdGEMDigiMuonDigiCollection_simMuonGEMDigis__DIGI.</Branch>
+  <Branch>GEMDetIdGEMPadDigiClusterMuonDigiCollection_simMuonGEMPadDigiClusters__DIGI.</Branch>
+  <Branch>GEMDetIdGEMPadDigiMuonDigiCollection_simMuonGEMPadDigis__DIGI.</Branch>
+  <Branch>GEMDigiSimLinkedmDetSetVector_simMuonGEMDigis_GEM_DIGI.</Branch>
+  <Branch>GEMDigiSimLinkedmDetSetVector_simMuonME0Digis_ME0_DIGI.</Branch>
+  <Branch>GenEventInfoProduct_generator__SIM.</Branch>
+  <Branch>HBHEDataFramesSorted_simHcalDigis__DIGI.</Branch>
+  <Branch>HBHEDataFramesSorted_simHcalUnsuppressedDigis__DIGI.</Branch>
+  <Branch>HFDataFramesSorted_simHcalDigis__DIGI.</Branch>
+  <Branch>HFDataFramesSorted_simHcalUnsuppressedDigis__DIGI.</Branch>
+  <Branch>HGCalDetIdHGCSampleHGCDataFramesSorted_mix_HGCDigisEE_DIGI.</Branch>
+  <Branch>HGCalDetIdHGCSampleHGCDataFramesSorted_mix_HGCDigisHEfront_DIGI.</Branch>
+  <Branch>HODataFramesSorted_simHcalDigis__DIGI.</Branch>
+  <Branch>HODataFramesSorted_simHcalUnsuppressedDigis__DIGI.</Branch>
+  <Branch>HcalDetIdHGCSampleHGCDataFramesSorted_mix_HGCDigisHEback_DIGI.</Branch>
+  <Branch>HcalTriggerPrimitiveDigisSorted_simHcalTriggerPrimitiveDigis__DIGI.</Branch>
+  <Branch>ME0DetIdME0DigiMuonDigiCollection_simMuonME0Digis__DIGI.</Branch>
+  <Branch>ME0DetIdME0DigiPreRecoMuonDigiCollection_simMuonME0PseudoDigis__DIGI.</Branch>
+  <Branch>ME0DetIdME0DigiPreRecoMuonDigiCollection_simMuonME0PseudoReDigis__DIGI.</Branch>
+  <Branch>ME0DetIdME0PadDigiClusterMuonDigiCollection_simMuonME0PadDigiClusters__DIGI.</Branch>
+  <Branch>ME0DetIdME0PadDigiMuonDigiCollection_simMuonME0PadDigis__DIGI.</Branch>
+  <Branch>ME0DetIdintMuonDigiCollection_simMuonME0PseudoReDigis__DIGI.</Branch>
+  <Branch>PCaloHits_g4SimHits_CaloHitsTk_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_CastorBU_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_CastorFI_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_CastorPL_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_CastorTU_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_ChamberHits_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_EcalHitsEB_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_EcalHitsEE_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_EcalHitsES_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_EcalTBH4BeamHits_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_FibreHits_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_HGCHitsEE_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_HGCHitsHEback_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_HGCHitsHEfront_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_HcalHits_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_HcalTB06BeamHits_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_WedgeHits_SIM.</Branch>
+  <Branch>PCaloHits_g4SimHits_ZDCHITS_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_BCM1FHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_BHMHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_BSCHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_FP420SI_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_FastTimerHitsBarrel_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_FastTimerHitsEndcap_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_MuonCSCHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_MuonDTHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_MuonGEMHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_MuonME0Hits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_MuonRPCHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_PLTHits_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TotemHitsRP_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TotemHitsT1_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TotemHitsT2Gem_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsPixelBarrelHighTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsPixelBarrelLowTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsPixelEndcapHighTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsPixelEndcapLowTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTECHighTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTECLowTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTIBHighTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTIBLowTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTIDHighTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTIDLowTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTOBHighTof_SIM.</Branch>
+  <Branch>PSimHits_g4SimHits_TrackerHitsTOBLowTof_SIM.</Branch>
+  <Branch>Phase2TrackerDigiedmDetSetVector_mix_Tracker_DIGI.</Branch>
+  <Branch>PileupSummaryInfos_addPileupInfo__DIGI.</Branch>
+  <Branch>PixelDigiSimLinkedmDetSetVector_simSiPixelDigis_Pixel_DIGI.</Branch>
+  <Branch>PixelDigiSimLinkedmDetSetVector_simSiPixelDigis_Tracker_DIGI.</Branch>
+  <Branch>PixelDigiedmDetSetVector_simSiPixelDigis_Pixel_DIGI.</Branch>
+  <Branch>QIE10DataFrameHcalDataFrameContainer_simHcalDigis_HFQIE10DigiCollection_DIGI.</Branch>
+  <Branch>QIE10DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HFQIE10DigiCollection_DIGI.</Branch>
+  <Branch>QIE11DataFrameHcalDataFrameContainer_simHcalDigis_HBHEQIE11DigiCollection_DIGI.</Branch>
+  <Branch>QIE11DataFrameHcalDataFrameContainer_simHcalUnsuppressedDigis_HBHEQIE11DigiCollection_DIGI.</Branch>
+  <Branch>RPCDetIdRPCDigiMuonDigiCollection_simMuonRPCDigis__DIGI.</Branch>
+  <Branch>RPCDigiSimLinkedmDetSetVector_simMuonRPCDigis_RPCDigiSimLink_DIGI.</Branch>
+  <Branch>SiStripDigiedmDetSetVector_simSiStripDigis_ZeroSuppressed_DIGI.</Branch>
+  <Branch>SiStripRawDigiedmDetSetVector_simSiStripDigis_ProcessedRaw_DIGI.</Branch>
+  <Branch>SiStripRawDigiedmDetSetVector_simSiStripDigis_ScopeMode_DIGI.</Branch>
+  <Branch>SiStripRawDigiedmDetSetVector_simSiStripDigis_VirginRaw_DIGI.</Branch>
+  <Branch>SimTracks_g4SimHits__SIM.</Branch>
+  <Branch>SimVertexs_g4SimHits__SIM.</Branch>
+  <Branch>StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCStripDigiSimLinks_DIGI.</Branch>
+  <Branch>StripDigiSimLinkedmDetSetVector_simMuonCSCDigis_MuonCSCWireDigiSimLinks_DIGI.</Branch>
+  <Branch>StripDigiSimLinkedmDetSetVector_simMuonGEMDigis_GEM_DIGI.</Branch>
+  <Branch>StripDigiSimLinkedmDetSetVector_simMuonME0Digis_ME0_DIGI.</Branch>
+  <Branch>StripDigiSimLinkedmDetSetVector_simSiStripDigis__DIGI.</Branch>
+  <Branch>ZDCDataFramesSorted_simHcalUnsuppressedDigis__DIGI.</Branch>
+  <Branch>double_ak4GenJets_rho_DIGI.</Branch>
+  <Branch>double_ak4GenJets_sigma_DIGI.</Branch>
+  <Branch>double_ak4GenJetsNoNu_rho_DIGI.</Branch>
+  <Branch>double_ak4GenJetsNoNu_sigma_DIGI.</Branch>
+  <Branch>double_ak8GenJets_rho_DIGI.</Branch>
+  <Branch>double_ak8GenJets_sigma_DIGI.</Branch>
+  <Branch>double_ak8GenJetsNoNu_rho_DIGI.</Branch>
+  <Branch>double_ak8GenJetsNoNu_sigma_DIGI.</Branch>
+  <Branch>doubles_ak4GenJets_rhos_DIGI.</Branch>
+  <Branch>doubles_ak4GenJets_sigmas_DIGI.</Branch>
+  <Branch>doubles_ak4GenJetsNoNu_rhos_DIGI.</Branch>
+  <Branch>doubles_ak4GenJetsNoNu_sigmas_DIGI.</Branch>
+  <Branch>doubles_ak8GenJets_rhos_DIGI.</Branch>
+  <Branch>doubles_ak8GenJets_sigmas_DIGI.</Branch>
+  <Branch>doubles_ak8GenJetsNoNu_rhos_DIGI.</Branch>
+  <Branch>doubles_ak8GenJetsNoNu_sigmas_DIGI.</Branch>
+  <Branch>edmHepMCProduct_generatorSmeared__DIGI.</Branch>
+  <Branch>edmHepMCProduct_generatorSmeared__SIM.</Branch>
+  <Branch>edmRandomEngineStates_randomEngineStateProducer__DIGI.</Branch>
+  <Branch>edmRandomEngineStates_randomEngineStateProducer__SIM.</Branch>
+  <Branch>edmTriggerResults_TriggerResults__DIGI.</Branch>
+  <Branch>edmTriggerResults_TriggerResults__SIM.</Branch>
+  <Branch>float_genParticles_t0_DIGI.</Branch>
+  <Branch>floatROOTMathCartesian3DROOTMathDefaultCoordinateSystemTagROOTMathPositionVector3D_genParticles_xyz0_DIGI.</Branch>
+  <Branch>int_addPileupInfo_bunchSpacing_DIGI.</Branch>
+  <Branch>int6stdbitsetstdpairs_mix_AffectedAPVList_DIGI.</Branch>
+  <Branch>ints_genParticles__DIGI.</Branch>
+  <Branch>recoGenJets_ak4GenJets__DIGI.</Branch>
+  <Branch>recoGenJets_ak4GenJetsNoNu__DIGI.</Branch>
+  <Branch>recoGenJets_ak8GenJets__DIGI.</Branch>
+  <Branch>recoGenJets_ak8GenJetsNoNu__DIGI.</Branch>
+  <Branch>recoGenMETs_genMetCalo__DIGI.</Branch>
+  <Branch>recoGenMETs_genMetTrue__DIGI.</Branch>
+  <Branch>recoGenParticles_genParticles__DIGI.</Branch>
+</Branches>
+<InputType>primaryFiles</InputType>
+<InputSourceClass>PoolSource</InputSourceClass>
+<EventsRead>0</EventsRead>
+<Runs>
+</Runs>
+</InputFile>
+</FrameworkJobReport>
