@@ -2,13 +2,11 @@
 #define DataFormats_ME0RecHit_H
 
 /** \class ME0RecHit
-*
-* RecHit for ME0
-*
-* $Date: 2014/02/03 16:54:23 $
-* $Revision: 1.1 $
-* \author M. Maggi -- INFN Bari
-*/
+ *
+ *  RecHit for ME0 
+ *
+ *  \author M. Maggi -- INFN Bari 
+ */
 
 #include "DataFormats/TrackingRecHit/interface/RecHit2DLocalPos.h"
 #include "DataFormats/MuonDetId/interface/ME0DetId.h"
@@ -18,27 +16,35 @@ class ME0RecHit : public RecHit2DLocalPos {
  public:
 
   ME0RecHit(const ME0DetId& me0Id,
-float tof);
+	    int bx);
 
   /// Default constructor
   ME0RecHit();
 
-  /// Constructor from a local position, ME0Id and digi time.
-  ME0RecHit(const ME0DetId& me0Id,
-float tof,
-const LocalPoint& pos);
-  
-
-  /// Constructor from a local position and error, ME0Id and tof.
+  /// Constructor from a local position, me0Id and digi time.
   /// The 3-dimensional local error is defined as
   /// resolution (the cell resolution) for the coordinate being measured
   /// and 0 for the two other coordinates
   ME0RecHit(const ME0DetId& me0Id,
-float tof,
-const LocalPoint& pos,
-const LocalError& err);
+	    int bx,
+	    const LocalPoint& pos);
   
 
+  /// Constructor from a local position and error, me0Id and bx.
+  ME0RecHit(const ME0DetId& me0Id,
+	    int bx,
+	    const LocalPoint& pos,
+	    const LocalError& err);
+  
+
+  /// Constructor from a local position and error, me0Id, bx, frist strip of cluster and cluster size.
+  ME0RecHit(const ME0DetId& me0Id,
+	    int bx,
+	    int firstStrip,
+	    int clustSize,
+	    const LocalPoint& pos,
+	    const LocalError& err);
+  
   /// Destructor
   virtual ~ME0RecHit();
 
@@ -68,7 +74,7 @@ const LocalError& err);
   virtual std::vector<TrackingRecHit*> recHits();
 
 
-  /// Set local position
+  /// Set local position 
   void setPosition(LocalPoint pos) {
     theLocalPosition = pos;
   }
@@ -87,21 +93,34 @@ const LocalError& err);
   }
   
 
-  /// Return the gemId
+  /// Return the me0Id
   ME0DetId me0Id() const {
     return theME0Id;
   }
- 
-  float tof() const {
-    return theTOF;
+
+  int BunchX() const {
+    return theBx;
   }
 
-  /// Comparison operator, based on the gemId and the digi time
+  int firstClusterStrip() const {
+    return theFirstStrip;
+  }
+
+  int clusterSize() const {
+    return theClusterSize;
+  }
+
+  float tof() const {	//added by Martina
+    return theBx*25.0;	//
+  }			//
+  /// Comparison operator, based on the me0Id and the digi time
   bool operator==(const ME0RecHit& hit) const;
 
  private:
   ME0DetId theME0Id;
-  float theTOF;
+  int theBx;
+  int theFirstStrip;
+  int theClusterSize;
   // Position and error in the Local Ref. Frame of the ME0Layer
   LocalPoint theLocalPosition;
   LocalError theLocalError;
